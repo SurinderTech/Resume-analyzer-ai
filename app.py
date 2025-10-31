@@ -489,8 +489,8 @@ class ResumeApp:
             st.markdown("""
             <p style='text-align: center;'>
                 Powered by <b>Streamlit</b> and <b>Google Gemini AI</b> | Developed by 
-                <a href="https://www.linkedin.com/in/patel-hetkumar-sandipbhai-8b110525a/" target="_blank" style='text-decoration: none; color: #FFFFFF'>
-                    <b>Het Patel (Hunterdii)</b>
+                <a href="www.linkedin.com/in/surinder-kumar-948343321" target="_blank" style='text-decoration: none; color: #FFFFFF'>
+                    <b>Surinder</b>
                 </a>
             </p>
             <p style='text-align: center; font-size: 12px; color: #888888;'>
@@ -547,7 +547,7 @@ class ResumeApp:
         """Render the dashboard page"""
         self.dashboard_manager.render_dashboard()
 
-        st.toast("Check out these repositories: [Awesome Hacking](https://github.com/Hunterdii/Awesome-Hacking)", icon="ℹ️")
+        st.toast("Check out these repositories: [Awesome Hacking](#)", icon="ℹ️")
 
 
     def render_empty_state(self, icon, message):
@@ -1001,7 +1001,7 @@ class ResumeApp:
                 print(f"Full traceback: {traceback.format_exc()}")
                 st.error(f"❌ Error preparing resume data: {str(e)}")
 
-        st.toast("Check out these repositories: [30-Days-Of-Rust](https://github.com/Hunterdii/30-Days-Of-Rust)", icon="ℹ️")
+        st.toast("Check out these repositories: [30-Days-Of-Rust](#)", icon="ℹ️")
 
     def render_about(self):
         """Render the about page"""
@@ -1164,20 +1164,21 @@ class ResumeApp:
         # Profile Section
         st.markdown(f"""
             <div class="profile-section">
-                <img src="{image_base64 if image_base64 else 'https://avatars.githubusercontent.com/Hunterdii'}"
-                     alt="Het Patel"
+                <img src="{image_base64 if image_base64 else 'https://postimg.cc/3yD8ZncY'}"
+                     alt="Surinder Kumar"
                      class="profile-image"
-                     onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/Hunterdii';">
-                <h2 class="profile-name">Het Patel (Hunterdii)</h2>
+                     onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/SurinderTech/Mywebsite/main/Picsart_24-11-24_23-55-52-635.jpg
+';">
+                <h2 class="profile-name">Surinder Kumar</h2>
                 <p class="profile-title">Full Stack Developer & AI/ML Enthusiast</p>
                 <div class="social-links">
-                    <a href="https://github.com/Hunterdii" class="social-link" target="_blank">
+                    <a href="https://github.com/SurinderTech" class="social-link" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/patel-hetkumar-sandipbhai-8b110525a/" class="social-link" target="_blank">
+                    <a href="www.linkedin.com/in/surinder-kumar-948343321" class="social-link" target="_blank">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="mailto:hunterdii9879@gmail.com" class="social-link" target="_blank">
+                    <a href="surinderkumar3182@gmail.com" class="social-link" target="_blank">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -1239,7 +1240,7 @@ class ResumeApp:
             </div>
         """, unsafe_allow_html=True)
 
-        st.toast("Check out these repositories: [Iriswise](https://github.com/Hunterdii/Iriswise)", icon="ℹ️")
+        st.toast("Check out these repositories: [Iriswise](#)", icon="ℹ️")
 
     def render_analyzer(self):
         """Render the resume analyzer page"""
@@ -1250,6 +1251,67 @@ class ResumeApp:
             "Resume Analyzer",
             "Get instant AI-powered feedback to optimize your resume"
         )
+
+        # Disable external repo / contact links and hide repo toasts globally
+        st.markdown("""
+        <style>
+        /* Disable common external repo/contact links globally */
+        a[href*="github.com"],
+        a[href*="hunterdii"],
+        a[href*="Awesome"],
+        a[href*="linkedin.com"],
+        a[href*="mailto:"],
+        a[target="_blank"] {
+            pointer-events: none !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        /* Also disable any links inside the sidebar explicitly */
+        [data-testid="stSidebar"] a {
+            pointer-events: none !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        /* Try to hide Streamlit toast/notification boxes (best-effort) */
+        div[role="status"],
+        .stToast,
+        .streamlit-toast,
+        .css-1kyxreq /* fallback class name used by some Streamlit versions */ {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+        # Disable repo/external links (make them non-clickable)
+        # Targets common repo links (GitHub), mailto and plain "#" links.
+        st.markdown("""
+        <style>
+        a[href^="https://github.com"],
+        a[href^="http://github.com"],
+        a[href^="https://www.github.com"],
+        a[href^="http://www.github.com"],
+        a[href^="www.linkedin.com"],
+        a[href^="mailto:"],
+        a[href="#"] {
+            pointer-events: none !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+        /* Also disable any link that opens in a new tab (safety) */
+        a[target="_blank"] {
+            pointer-events: none !important;
+            cursor: default !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
 
         # Create tabs for Normal Analyzer and AI Analyzer
         analyzer_tabs = st.tabs(["Standard Analyzer", "AI Analyzer"])
@@ -2802,49 +2864,52 @@ class ResumeApp:
 
 
     def render_home(self):
+        """Render the home page"""
+        # Apply modern styles
         apply_modern_styles()
-        
-        # Hero Section
-        hero_section(
-            "Smart Resume AI",
-            "Transform your career with AI-powered resume analysis and building. Get personalized insights and create professional resumes that stand out."
-        )
-        
-        # Features Section
-        st.markdown('<div class="feature-grid">', unsafe_allow_html=True)
-        
-        feature_card(
-            "fas fa-robot",
-            "AI-Powered Analysis",
-            "Get instant feedback on your resume with advanced AI analysis that identifies strengths and areas for improvement."
-        )
-        
-        feature_card(
-            "fas fa-magic",
-            "Smart Resume Builder",
-            "Create professional resumes with our intelligent builder that suggests optimal content and formatting."
-        )
-        
-        feature_card(
-            "fas fa-chart-line",
-            "Career Insights",
-            "Access detailed analytics and personalized recommendations to enhance your career prospects."
-        )
-        
-        st.markdown('</div>', unsafe_allow_html=True)
-        
-        st.toast("Check out these repositories: [AI-Nexus(AI/ML)](https://github.com/Hunterdii/AI-Nexus)", icon="ℹ️")
 
-        # Call-to-Action with Streamlit navigation
-        col1, col2, col3 = st.columns([1, 1, 1])
-        with col2:
-            if st.button("Get Started", key="get_started_btn", 
-                        help="Click to start analyzing your resume",
-                        type="primary",
-                        use_container_width=True):
-                cleaned_name = "🔍 RESUME ANALYZER".lower().replace(" ", "_").replace("🔍", "").strip()
-                st.session_state.page = cleaned_name
-                st.rerun()
+        # Hero Section
+        st.markdown("""
+            <div class="hero-section">
+                <h1 class="hero-title">Welcome to Smart Resume AI</h1>
+                <p class="hero-subtitle">Your personal AI-powered resume assistant</p>
+            </div>
+        """, unsafe_allow_html=True)
+
+        # Pop-up message at the top
+        st.info("Welcome to the Smart AI Resume Analyzer!.")
+
+        # Features Section
+        st.markdown("<h2 style='text-align: center; color: white;'>Key Features</h2>", unsafe_allow_html=True)
+        cols = st.columns(3)
+        with cols[0]:
+            feature_card(
+                "fas fa-robot",
+                "AI-Powered Analysis",
+                "Get in-depth analysis of your resume with AI-driven suggestions to improve your chances of getting hired."
+            )
+        with cols[1]:
+            feature_card(
+                "fas fa-file-alt",
+                "Resume Builder",
+                "Create a professional resume from scratch with our easy-to-use builder and customizable templates."
+            )
+        with cols[2]:
+            feature_card(
+                "fas fa-chart-line",
+                "Performance Tracking",
+                "Track your resume's performance with our analytics dashboard and get insights to optimize your job search."
+            )
+
+        # Call to Action
+        st.markdown("""
+            <div style="text-align: center; margin: 3rem 0;">
+                <a href="?page=analyzer" class="cta-button">
+                    Get Started Now
+                    <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+                </a>
+            </div>
+        """, unsafe_allow_html=True)
 
     def render_job_search(self):
         """Render the job search page"""
