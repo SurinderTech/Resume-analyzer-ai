@@ -616,3 +616,4 @@ If you appreciate this repository and want to show your support, you can do so t
 | **Thanks.dev**         | [![Thanks.dev](https://img.shields.io/badge/💜-Thanks.dev-purple?style=flat-square)](https://thanks.dev/Hunterdii)                                          |
 
 **Thank you for your support! Every bit helps keep this repository going.** 🌈✨
+# Resume-analyzer-ai
