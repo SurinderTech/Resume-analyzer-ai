@@ -474,7 +474,7 @@ class ResumeApp:
             # GitHub star button with lottie animation
             st.markdown("""
             <div style='display: flex; justify-content: center; align-items: center; margin-bottom: 10px;'>
-                <a href='https://github.com/Hunterdii/Smart-AI-Resume-Analyzer' target='_blank' style='text-decoration: none;'>
+                <a href='https://github.com/SurinderTech' rel="noopener noreferrer" target='_blank' style='text-decoration: none;'>
                     <div style='display: flex; align-items: center; background-color: #24292e; padding: 5px 10px; border-radius: 5px; transition: all 0.3s ease;'>
                         <svg height="16" width="16" viewBox="0 0 16 16" version="1.1" style='margin-right: 5px;'>
                             <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z" fill="gold"></path>
@@ -895,16 +895,12 @@ class ResumeApp:
         })
 
         # Generate Resume button
-        if st.button("Generate Resume 📄", type="primary"):
-            print("Validating form data...")
-            print(f"Session state form data: {st.session_state.form_data}")
-            print(
-    f"Email input value: {
-        st.session_state.get(
-            'email_input',
-             '')}")
+    if st.button("Generate Resume 📄", type="primary"):
+        print("Validating form data...")
+        print(f"Session state form data: {st.session_state.form_data}")
+        print(f"Email input value: {st.session_state.get('email_input', '')}")
 
-            # Get the current values from form
+        # Get the current values from form
             current_name = st.session_state.form_data['personal_info']['full_name'].strip(
             )
             current_email = st.session_state.email_input if 'email_input' in st.session_state else ''
@@ -1164,7 +1160,7 @@ class ResumeApp:
         # Profile Section
         st.markdown(f"""
             <div class="profile-section">
-                <img src="{image_base64 if image_base64 else 'https://postimg.cc/3yD8ZncY'}"
+                <img src="{image_base64 if image_base64 else 'https://raw.githubusercontent.com/SurinderTech/Mywebsite/main/Picsart_24-11-24_23-55-52-635.jpg'}"
                      alt="Surinder Kumar"
                      class="profile-image"
                      onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/SurinderTech/Mywebsite/main/Picsart_24-11-24_23-55-52-635.jpg
@@ -1240,7 +1236,7 @@ class ResumeApp:
             </div>
         """, unsafe_allow_html=True)
 
-        st.toast("Check out these repositories: [Iriswise](#)", icon="ℹ️")
+    
 
     def render_analyzer(self):
         """Render the resume analyzer page"""
@@ -2944,31 +2940,8 @@ class ResumeApp:
 
 
     def show_repo_notification(self):
-        message = """
-<div style="background-color: #1e1e1e; border-radius: 10px; border: 1px solid #4b6cb7; padding: 10px; margin: 10px 0; color: white;">
-    <div style="margin-bottom: 10px;">Check out these other repositories:</div>
-    <div style="margin-bottom: 5px;"><b>Hacking Resources:</b></div>
-    <ul style="margin-top: 0; padding-left: 20px;">
-        <li><a href="https://github.com/Hunterdii/tryhackme-free-rooms" target="_blank" style="color: #4CAF50;">TryHackMe Free Rooms</a></li>
-        <li><a href="https://github.com/Hunterdii/Awesome-Hacking" target="_blank" style="color: #4CAF50;">Awesome Hacking</a></li>
-    </ul>
-    <div style="margin-bottom: 5px;"><b>Programming Languages:</b></div>
-    <ul style="margin-top: 0; padding-left: 20px;">
-        <li><a href="https://github.com/Hunterdii/Awesome-Java" target="_blank" style="color: #4CAF50;">Awesome Java</a></li>
-        <li><a href="https://github.com/Hunterdii/30-Days-Of-Rust" target="_blank" style="color: #4CAF50;">30 Days Of Rust</a></li>
-    </ul>
-    <div style="margin-bottom: 5px;"><b>Data Structures & Algorithms:</b></div>
-    <ul style="margin-top: 0; padding-left: 20px;">
-        <li><a href="https://github.com/Hunterdii/GeeksforGeeks-POTD" target="_blank" style="color: #4CAF50;">GeeksforGeeks POTD</a></li>
-        <li><a href="https://github.com/Hunterdii/Leetcode-POTD" target="_blank" style="color: #4CAF50;">Leetcode POTD</a></li>
-    </ul>
-    <div style="margin-bottom: 5px;"><b>AI/ML Projects:</b></div>
-    <ul style="margin-top: 0; padding-left: 20px;">
-        <li><a href="https://github.com/Hunterdii/AI-Nexus" target="_blank" style="color: #4CAF50;">AI Nexus</a></li>
-    </ul>
-    <div style="margin-top: 10px;">If you find this project helpful, please consider ⭐ starring the repo!</div>
-</div>
-"""
+        # remove repository links and keep sidebar notification blank
+        message = ""
         st.sidebar.markdown(message, unsafe_allow_html=True)
 
 
@@ -2989,41 +2962,70 @@ class ResumeApp:
                     st.session_state.page = cleaned_name
                     st.rerun()
 
-            # Add some space before admin login
+            # Admin UI removed: clear admin-related session keys and keep sidebar minimal (no login/logout controls)
+            for _k in ("is_admin", "current_admin_email", "admin_email_input", "admin_password_input", "login_button", "logout_button"):
+                if _k in st.session_state:
+                    del st.session_state[_k]
+            st.markdown("<div style='padding:8px;color:#aaa;'></div>", unsafe_allow_html=True)
             st.markdown("<br><br>", unsafe_allow_html=True)
             st.markdown("---")
 
-            # Admin Login/Logout section at bottom
-            if st.session_state.get('is_admin', False):
-                st.success(f"Logged in as: {st.session_state.get('current_admin_email')}")
-                if st.button("Logout", key="logout_button"):
-                    try:
-                        log_admin_action(st.session_state.get('current_admin_email'), "logout")
-                        st.session_state.is_admin = False
-                        st.session_state.current_admin_email = None
-                        st.success("Logged out successfully!")
-                        st.rerun()
-                    except Exception as e:
-                        st.error(f"Error during logout: {str(e)}")
-            else:
-                with st.expander("👤 Admin Login"):
-                    admin_email_input = st.text_input("Email", key="admin_email_input")
-                    admin_password = st.text_input("Password", type="password", key="admin_password_input")
-                    if st.button("Login", key="login_button"):
-                            try:
-                                if verify_admin(admin_email_input, admin_password):
-                                    st.session_state.is_admin = True
-                                    st.session_state.current_admin_email = admin_email_input
-                                    log_admin_action(admin_email_input, "login")
-                                    st.success("Logged in successfully!")
-                                    st.rerun()
-                                else:
-                                    st.error("Invalid credentials")
-                            except Exception as e:
-                                st.error(f"Error during login: {str(e)}")
-        
-            # Display the repository notification in the sidebar
-            self.show_repo_notification()
+            # Remove/disable admin login UI rendered later in this sidebar block.
+            # Approach: replace st.expander with a no-op container and make admin buttons no-ops,
+            # so the existing admin form (below) won't render or be actionable.
+            try:
+                # Backup originals (optional but safe)
+                _st_expander_orig = st.expander
+                _st_button_orig = st.button
+                _st_text_input_orig = st.text_input
+
+                # Override text_input to suppress admin password field
+                def _text_input_override(label, *args, **kwargs):
+                    key = kwargs.get("key", "")
+                    # If this is the admin password input, return empty string and skip rendering
+                    if key == "admin_password_input" or (isinstance(label, str) and "password" in label.lower()):
+                        return ""
+                    return _st_text_input_orig(label, *args, **kwargs)
+
+                st.text_input = _text_input_override
+
+                # Make expander return an empty container (no inner UI will be rendered)
+                st.expander = lambda *a, **k: st.empty()
+
+                # Make admin-specific buttons inert; preserve normal buttons elsewhere
+                def _button_override(label, *args, **kwargs):
+                    key = kwargs.get("key", "")
+                    if key in ("login_button", "logout_button"):
+                        return False
+                    return _st_button_orig(label, *args, **kwargs)
+
+                st.button = _button_override
+            except Exception:
+                # Fail-safe: if anything goes wrong, continue without crashing
+                pass
+
+            # Hide all links inside the sidebar to remove link-type sections visually
+            st.markdown(
+                """
+                <style>
+                [data-testid="stSidebar"] a,
+                [data-testid="stSidebar"] .stMarkdown a {
+                    pointer-events: none !important;
+                    color: inherit !important;
+                    text-decoration: none !important;
+                    cursor: default !important;
+                }
+                /* Hide any remaining admin expander header text if present */
+                [data-testid="stSidebar"] div[role="button"] > span:contains("Admin Login"),
+                [data-testid="stSidebar"] div[role="button"] > span:contains("👤 Admin Login") {
+                    display: none !important;
+                }
+                </style>
+                """,
+                unsafe_allow_html=True,
+            )
+
+            
 
         # Force home page on first load
         if 'initial_load' not in st.session_state:

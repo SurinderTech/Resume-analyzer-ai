@@ -561,3 +561,4 @@ Explore the code, contribute, or drop a Star: https://github.com/SurinderTech/Re
 
 **Thank you for your support! Every bit helps keep this repository going.** 🌈✨
 # Resume-analyzer-ai
+# Resume-analyzer-ai
