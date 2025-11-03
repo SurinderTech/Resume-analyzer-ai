@@ -418,3 +418,18 @@ def render_suggestions_section(resume_uploaded=False):
         """, unsafe_allow_html=True)
     
     st.markdown("</div>", unsafe_allow_html=True)
+
+def render_navigation_buttons():
+    """Render back and next navigation buttons"""
+    history = st.session_state.get("page_history", [])
+    if len(history) > 1:
+        col1, col2 = st.columns([1, 1])
+        with col1:
+            if st.button("⬅️ Back"):
+                st.session_state.page_history.pop()
+                st.session_state.page = st.session_state.page_history[-1]
+                st.rerun()
+        with col2:
+            # The next button is not implemented as it would require knowing the "next" page in advance.
+            # This can be implemented if there is a predefined flow of pages.
+            pass
