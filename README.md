@@ -344,7 +344,7 @@ This is a **known issue with the resume builder feature**, where the autofill be
 We're actively working on a permanent fix to ensure your experience is seamless. Thank you for your understanding and support! 🙏  
 
 
-## 🎯 **Why Choose Smart Resume AI?**  
+## 🎯 *Why Choose Smart Resume AI?**  
 
 ✨ **Tailored for You**  
 Your resume is optimized for the job you're aiming for, using role-specific insights.  
