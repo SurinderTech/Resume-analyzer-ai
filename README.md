@@ -39,7 +39,7 @@
   
 ## <img src="https://github.com/user-attachments/assets/a6e4d77f-56d6-4aa8-8278-0f5a18ef5eb9" width="24px"> **What Makes Us Different?**  
 
-**<img src="https://github.com/user-attachments/assets/76906dbc-343d-4267-ace5-048d428fff42" width="20px"> Next-Level Features for Success:**  
+*<img src="https://github.com/user-attachments/assets/76906dbc-343d-4267-ace5-048d428fff42" width="20px"> Next-Level Features for Success:*  
 1. 🕵️ **Deep Resume Analysis:**  
    - 🛡️ ATS Compatibility Score  
    - 🔑 Keyword Gap Analysis  
