@@ -111,7 +111,7 @@ Get real-time feedback, boost your resume's impact, and maximize your chances of
 
 </details>
 
-## 💡 **How It Works**  
+## 💡 *How It Works*  
 
 1. **Upload or Start from Scratch**  
    - Import your resume in **PDF/Word** or create one from scratch with our AI-powered builder.  
