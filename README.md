@@ -57,7 +57,7 @@
    - ✍️ Content Enhancement Tips  
    - 🌟 Industry-Specific Insights  
 
-**🎉 Why Use Smart Resume AI?**  
+<h1>**🎉 Why Use Smart Resume AI?**</h1>
 Get real-time feedback, boost your resume's impact, and maximize your chances of getting shortlisted—all with a sleek and intuitive interface.  
 
 ## <img src="https://github.com/user-attachments/assets/e5ac1371-6ac4-48b6-b95c-5ef9afaf1353" width="30"> **Live Demo**  
