@@ -136,3 +136,4 @@ Thumbs.db
 # Resume files uploaded by users
 uploads/
 resume_data.db
+chromedriver.exe
