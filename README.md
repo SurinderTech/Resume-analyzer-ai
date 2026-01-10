@@ -8,9 +8,12 @@
 #  *🏝️ Smart AI Resume Analyzer 🏝️*  
 <!--<img src="https://github.com/user-attachments/assets/8a37c282-efa0-45af-8f37-8e564a62ecd2" width="35">-->
 **Your Intelligent Career Partner**  
-<img src="https://github.com/user-attachments/assets/76906dbc-343d-4267-ace5-048d428fff42" width="20px"> Smart AI Resume Analyzer is your all-in-one tool to analyze, optimize, and craft resumes that stand out, helping you land your dream job.  
-</div>
+<img src="https://github.com/user-attachments/assets/76906dbc-343d-4267-ace5-048d428fff42" width="20px">  Smart Resume AI
 
+Your AI-powered resume assistant for career success
+
+Smart Resume AI is a full-stack, AI-driven platform that helps users analyze, build, optimize, and track resumes, while also matching them with real-time job opportunities and ATS-based insights..  
+</div>
 
 
   </h4>
@@ -20,12 +23,24 @@
       <a href="www.linkedin.com/in/surinder-kumar-948343321">Surinder</a>
      </small>
   </p>
-  <small align="justify"><img src="https://github.com/user-attachments/assets/76906dbc-343d-4267-ace5-048d428fff42" width="20px"> A Project Submitted for the partial fulfilment of the sem 3 
-   during academic year 2025
-  </small>
+
 </div><br/><br/>
 </div>  
 
+
+<h1>🧠 How Smart Resume AI Works (High-Level)</h1>
+
+1. User uploads or builds a resume
+
+2. Resume is parsed into structured data
+
+3. AI + ATS logic analyzes skills, keywords, and structure
+
+4. Real-time feedback and scores are generated
+
+5. Resume performance is tracked on analytics dashboard
+
+6. Jobs are scraped and matched based on skills
   
 ## <img src="https://github.com/user-attachments/assets/a6e4d77f-56d6-4aa8-8278-0f5a18ef5eb9" width="24px"> **What Makes Us Different?**  
 
