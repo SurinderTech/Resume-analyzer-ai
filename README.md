@@ -20,8 +20,8 @@
       <a href="www.linkedin.com/in/surinder-kumar-948343321">Surinder</a>
      </small>
   </p>
-  <small align="justify"><img src="https://github.com/user-attachments/assets/76906dbc-343d-4267-ace5-048d428fff42" width="20px"> A Project Submitted for the partial fulfilment of the degree B.Tech at 
-    <a href="https://www.thinknexttraining.com/">ThinkNext Technology pvt limted</a> during academic year 2025
+  <small align="justify"><img src="https://github.com/user-attachments/assets/76906dbc-343d-4267-ace5-048d428fff42" width="20px"> A Project Submitted for the partial fulfilment of the sem 3 
+   during academic year 2025
   </small>
 </div><br/><br/>
 </div>  
