@@ -5,7 +5,7 @@
 
 <div align="center">
 
-#  *🏝️ Smart AI Resume Analyzer 🏝️*  
+#  *🏝️ Smart AI Resume Analyzer 🏝️* 
 <!--<img src="https://github.com/user-attachments/assets/8a37c282-efa0-45af-8f37-8e564a62ecd2" width="35">-->
 **Your Intelligent Career Partner**  
 <img src="https://github.com/user-attachments/assets/76906dbc-343d-4267-ace5-048d428fff42" width="20px">  Smart Resume AI
